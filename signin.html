@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="blogsite.css">
+    <script src="https://kit.fontawesome.com/05db2177e4.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            padding: 40px;
+            height: 90px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #E5E7EB;
+            box-shadow: 2px 2px 10px rgb(206, 210, 214);
+
+        }
+
+        .navbar {
+            display: flex;
+        }
+
+        .btn {
+            padding: 30px;
+            text-decoration: none;
+            font-size: large;
+            color: black;
+        }
+
+        .btn {
+            padding: 30px;
+            text-decoration: none;
+            font-size: large;
+            color: black;
+            font-weight: 800;
+        }
+
+        .btn:is(:link, :active, :visited).active {
+
+            background-color: rgb(199, 187, 187);
+            font-size: 22px;
+        }
+
+        .sign {
+            height: 400px;
+            width: 350px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 70px;
+            background-color: #E5E7EB;
+            /* box-shadow: rgb(198, 209, 221) 1px 10px 30px 5px; */
+            border: 3px solid black;
+            border-top: 10px solid #2c6886;
+        }
+
+        .sign input {
+            width: 290px;
+            height: 40px;
+            padding-left: 35px;
+            margin-top: 10px;
+            outline: none;
+        }
+
+        .sign button {
+            height: 40px;
+            width: 240px;
+            background-color: #2c6886;
+            border: none;
+            border-radius: 30px;
+            margin-top: 30px;
+        }
+
+        .sign button:active {
+            box-shadow: 2px 2px 5px rgb(22, 103, 157);
+        }
+
+        #login {
+            margin-top: 10px;
+        }
+
+        .logo .fa-person-walking {
+            font-size: 3rem;
+            margin-right: 30px;
+            margin-left: 130px;
+        }
+
+        .logo {
+            font-family: 'Shadows Into Light', cursive;
+            font-size: 50px;
+        }
+
+        .fontuser {
+            position: relative;
+        }
+
+        .fontuser i {
+            position: absolute;
+            left: 33px;
+            top: 20px;
+            color: gray;
+            font-size: 1.2rem;
+        }
+
+        .fa-solid {
+            font-size: 2rem;
+        }
+
+        .mobile-view {
+            display: none;
+            background: transparent;
+            cursor: pointer;
+        }
+
+        .fa-xmark {
+            display: none;
+
+        }
+
+         .list {
+            display: flex;
+            gap: 60px;
+        }
+
+        @media screen and (max-width:1050px) {
+            .logo {
+                font-size: 35px;
+            }
+
+            .btn {
+                font-size: medium;
+            }
+
+            .logo .fa-person-walking {
+                font-size: 2rem;
+                margin-left: 20px;
+            }
+        }
+
+        @media screen and (max-width:900px) {
+            .mobile-view {
+                display: block;
+                z-index: 1;
+            }
+
+            .header .logo {
+                width: 40%;
+            }
+
+            .navbar {
+                width: 28%;
+                height: 70vh;
+                right: 0;
+                background-color: #d2e2ed;
+                position: absolute;
+                top: 0;
+                /* display: flex; */
+                justify-content: center;
+                align-items: center;
+                transform: translateX(100%);
+                opacity: 0;
+                z-index: 1;
+                padding-top: 50px;
+            }
+
+            .header {
+                position: relative;
+            }
+
+            .list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .active .navbar {
+                transform: translateX(0);
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+            }
+
+            .active .mobile-view .fa-bars {
+                display: none;
+            }
+
+            .active .mobile-view .fa-xmark {
+                display: block;
+
+            }
+
+            .btn {
+                font-size: large;
+                height: 40px;
+                width: 130px;
+                padding: 0;
+                text-align: center;
+            }
+
+            .btn:is(:link, :active, :visited).active {
+
+                background-color: rgb(138, 166, 194);
+                font-weight: 800;
+                font-size: large;
+
+            }
+
+        }
+
+        @media screen and (max-width:1120px) {
+            .logo {
+                font-size: 30px;
+            }
+
+            .btn {
+                font-size: small;
+            }
+
+            .logo .fa-person-walking {
+                font-size: 1rem;
+            }
+
+            .logo .fa-person-walking {
+                font-size: 20px;
+                margin-right: 30px;
+                margin-left: 40px;
+            }
+        }
+
+        @media screen and (max-width:950px) {
+            .logo .fa-person-walking {
+                font-size: 20px;
+                margin-right: 30px;
+                margin-left: 10px;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="logo"><i class="fa-solid fa-person-walking"></i>Yoga website </h1>
+        <div class="navbar">
+            <div class="list">
+                <a class="btn" href="blogsite.html">Home</a>
+                <a class="btn" href="signin.html">Sign in</a>
+                <a class="btn" href="loginin.html">Login in</a>
+                <a class="btn" href="createblogs.html">Create Blogs</a>
+            </div>
+
+        </div>
+        <div class="mobile-view">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+    </header>
+    <div class="main">
+
+        <div class="page2">
+            <div class="sign">
+                <h1>Sign In</h1>
+                <div class="fontuser">
+                    <input type="text" name="username" placeholder=" Enter username" id="name">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="fontuser">
+                    <input type="text" name="email" placeholder="Email Address" id="email">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="fontuser">
+                    <input type="password" name="password" placeholder="password" id="password">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <div class="fontuser">
+                    <input type="password" name="password" placeholder="confirm password" id="cpassword">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <button>sign up</button>
+                <p id="login" style="color: black;">Already have an account?<a href="loginin.html">Login
+                        here</a></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        // ....sidebar..........
+        const mobile_nav = document.querySelector(".mobile-view");
+        const nav_header = document.querySelector(".header")
+        const toggleNavbar = () => {
+            nav_header.classList.toggle("active");
+
+        }
+        mobile_nav.addEventListener("click", () => {
+            toggleNavbar();
+
+        })
+
+        //.....active btn....................
+        const activepage = window.location.pathname;
+        console.log(activepage);
+        const alink = document.querySelectorAll(".btn").forEach(link => {
+            if (link.href.includes(`${activepage}`)) {
+                link.classList.add('active');
+            }
+
+        })
+        const userName = document.getElementById("name")
+        const namePattern = /^[a-z0-9 ]{8,15}$/
+
+        userName.addEventListener("input", nameMatchPattern);
+
+        function nameMatchPattern(obj) {
+            const bool = namePattern.test(obj.target.value)
+            if (bool) {
+                userName.style.borderColor = "green"
+            }
+            else {
+                userName.style.borderColor = "red"
+            }
+        }
+        const userEmail = document.getElementById("email")
+        const emailPattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
+
+        userEmail.addEventListener("input", emailmatchPattern);
+
+        function emailmatchPattern(obj) {
+            const bool = emailPattern.test(obj.target.value)
+            if (bool) {
+                userEmail.style.borderColor = "green";
+            }
+            else {
+                userEmail.style.borderColor = "red";
+            }
+        }
+        const userPassword = document.getElementById("password")
+        const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/   // 8 digit for one latter and one number 
+
+        userPassword.addEventListener("input", passwordMatchPattern);
+
+        function passwordMatchPattern(obj) {
+            // console.log(obj.target.value)
+            const bool = passwordPattern.test(obj.target.value)
+            if (bool) {
+                userPassword.style.borderColor = "green"
+            }
+            else {
+                userPassword.style.borderColor = "red"
+            }
+        }
+        const confirmPassword = document.getElementById("cpassword")
+        const confirmpwdPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/   // 8 digit for one latter and one number 
+
+        confirmPassword.addEventListener("input", CpasswordMatchPattern);
+
+        function CpasswordMatchPattern(obj) {
+            // console.log(obj.target.value)
+            const bool = confirmpwdPattern.test(obj.target.value)
+            if (bool) {
+                confirmPassword.style.borderColor = "green"
+            }
+            else {
+                confirmPassword.style.borderColor = "red"
+            }
+        }
+    </script>
+</body>
+
+</html>

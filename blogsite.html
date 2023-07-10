@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/05db2177e4.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        .header {
+            padding: 40px;
+            height: 90px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #E5E7EB;
+            box-shadow: 2px 2px 10px rgb(206, 210, 214);
+        }
+
+
+        .main {
+            display: flex;
+        }
+
+        .footer_page {
+            height: 100px;
+            background-color: #ced1d8;
+            color: black;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer p {
+            padding-top: 10px;
+            font-size: x-large;
+            text-align: center;
+        }
+
+        .footer i {
+            font-size: 20px;
+            padding-left: 50px;
+            padding-top: 20px;
+            color: black;
+            text-align: center;
+            padding-right: 30px;
+        }
+
+        .mainblog {
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+            gap: 20px;
+            margin-top: 100px;
+
+        }
+
+        .sabblog {
+            height: 460px;
+            width: 300px;
+            margin-left: 20px;
+            text-align: justify;
+            display: block;
+            /* border: 1px solid green; */
+        }
+
+        .sabblog p {
+            height: 460px;
+            width: 300px;
+        }
+
+        .logo .fa-person-walking {
+            font-size: 3rem;
+            margin-left: 130px;
+            margin-right: 30px;
+        }
+
+        .fixed {
+            position: relative;
+        }
+
+        .navbar {
+            display: flex;
+        }
+
+        .btn {
+            padding: 30px;
+            text-decoration: none;
+            font-size: large;
+            color: black;
+            font-weight: 800;
+        }
+
+        .logo {
+            font-family: 'Shadows Into Light', cursive;
+            font-size: 50px;
+        }
+
+        .container {
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .container .contain {
+            position: absolute;
+            top: 100px;
+            padding-right: 70px;
+            text-align: end;
+            color: black;
+            width: 100%;
+            font-size: 35px;
+            align-items: center;
+        }
+
+        .contain button {
+            height: 50px;
+            width: 300px;
+            border-radius: 50px;
+            background-color: rgb(250, 225, 3);
+            border: none;
+            font-size: large;
+        }
+
+        .warmpage {
+            height: 350px;
+            width: 300px;
+            position: absolute;
+            top: 390px;
+            background-color: rgb(220, 228, 231);
+            margin-left: 70px;
+            text-align: center;
+        }
+
+        .program {
+            position: relative;
+            height: 600px;
+            margin-top: 150px;
+            display: flex;
+            gap: 50px;
+        }
+
+        .subprogram {
+            position: absolute;
+            top: 50px;
+            padding-left: 35%;
+        }
+
+        .subprogram p {
+            margin-top: 30px;
+        }
+
+        .subprogram h1 {
+            margin-left: 60px;
+        }
+
+        .subprogram1 {
+            margin-top: 200px;
+            height: 350px;
+            width: 350px;
+            margin-left: 40px;
+            box-shadow: rgb(222, 235, 235) 1px 5px 20px 5px;
+
+        }
+
+        .subprogram1:hover {
+            opacity: 0.7;
+        }
+
+        .subprogram1 h2 {
+            text-align: center;
+            background-color: rgb(221, 189, 219);
+            height: 50px;
+        }
+
+        .btn:is(:link, :active, :visited).active {
+            background-color: rgb(199, 187, 187);
+            font-size: 22px;
+
+        }
+
+        .dailyyoga button {
+            height: 70px;
+            width: 400px;
+            border-radius: 50px;
+            background-color: #bec1c5;
+            border: none;
+            font-size: large;
+            margin-left: 35%;
+            margin-top: 100px;
+        }
+
+        .dailyyoga button:active {
+            background-color: #9da0a8;
+        }
+
+        .fa-solid {
+            font-size: 2rem;
+        }
+        .mobile-view {
+            display: none;
+            background: transparent;
+            cursor: pointer;
+        }
+
+        .fa-xmark {
+            display: none;
+
+        }
+
+        .list {
+            display: flex;
+            gap: 60px;
+        }
+
+        @media screen and (max-width:1050px) {
+            .logo {
+                font-size: 35px;
+            }
+
+            .btn {
+                font-size: medium;
+            }
+
+            .logo .fa-person-walking {
+                font-size: 2rem;
+                margin-left: 20px;
+            }
+        }
+
+        @media screen and (max-width:900px) {
+            .mobile-view {
+                display: block;
+                z-index: 1;
+            }
+
+            .header .logo {
+                width: 40%;
+            }
+
+            .navbar {
+                width: 28%;
+                height: 70vh;
+                right: 0;
+                background-color: #d2e2ed;
+                position: absolute;
+                top: 0;
+                /* display: flex; */
+                justify-content: center;
+                align-items: center;
+                transform: translateX(100%);
+                opacity: 0;
+                z-index: 1;
+                padding-top: 50px;
+            }
+
+            .header {
+                position: relative;
+            }
+
+            .list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .active .navbar {
+                transform: translateX(0);
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+            }
+
+            .active .mobile-view .fa-bars {
+                display: none;
+            }
+
+            .active .mobile-view .fa-xmark {
+                display: block;
+
+            }
+
+            .btn {
+                font-size: large;
+                height: 40px;
+                width: 130px;
+                padding: 0;
+                text-align: center;
+            }
+
+            .btn:is(:link, :active, :visited).active {
+
+                background-color: rgb(138, 166, 194);
+                font-weight: 800;
+                font-size: large;
+
+            }
+
+        }
+
+        @media screen and (max-width:1120px) {
+            .logo {
+                font-size: 30px;
+            }
+
+            .btn {
+                font-size: small;
+            }
+
+            .logo .fa-person-walking {
+                font-size: 1rem;
+            }
+
+            .logo .fa-person-walking {
+                font-size: 20px;
+                margin-right: 30px;
+                margin-left: 40px;
+            }
+        }
+
+        @media screen and (max-width:950px) {
+            .logo .fa-person-walking {
+                font-size: 20px;
+                margin-right: 30px;
+                margin-left: 10px;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+        }
+        img ,#displayImage{
+            width: 300px;
+            height: 200px;
+        }
+        #inherit{
+            width: 1400px;
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fixed">
+        <header class="header">
+            <h1 class="logo"><i class="fa-solid fa-person-walking"></i>Yoga website</h1>
+            <div class="navbar">
+                <div class="list">
+                    <a class="btn" href="blogsite.html">Home</a>
+                    <a class="btn" href="signin.html">Sign in</a>
+                    <a class="btn" href="loginin.html">Login in</a>
+                    <a class="btn" href="createblogs.html">Create Blogs</a>
+                </div>
+
+            </div>
+            <div class="mobile-view">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </header>
+    </div>
+    <div class="container">
+        <img id="inherit" src="8-Tips-to-Get-Started-with-Meditation_02.jpg" width="1400px" height="500px">
+        <div class="contain">
+            <p>Grab the opportunity to be <br> a part of the best yoga <br> classes at Natraj yoga & <br> meditation
+                center. <br> <br> <a href="createblogs.html"> <button>Add creating blog here</button> </a> </p>
+        </div>
+    </div>
+    <div class="warmpage">
+        <img src="Lateral-Lunge-Warm-Up-Exercises.webp" height="200px" width="300px">
+        <h2>Warm-up yoga daily class for beginner students!</h2><br>
+        <p>30 MINS SESSION | 5 SESSIONS</p>
+    </div>
+    <div class="program">
+        <div class="subprogram">
+            <h1>OUR PROGRAM</h1>
+            <p>Yoga Training Courses for every individual, as per your lifestyle</p>
+        </div>
+        <div class="subprogram1">
+            <a style="text-decoration: none; color: black;" href="yogabeggining.html"><img src="yoga-poses.webp"
+                    height="300px" width="350px">
+                <h2>Regular class for beginners</h2>
+            </a>
+        </div>
+        <div class="subprogram1">
+            <a style="text-decoration: none; color: black;"
+                href="https://business.cult.fit/organizations/employee-health-wellness-ggl?utm_source=google&utm_medium=cpc&utm_campaign=15788423432&utm_adgroup=133054878698&utm_ad=612842555989&utm_kd=corporate%20yoga%20programs&utm_mt=p&gad=1&gclid=Cj0KCQjw98ujBhCgARIsAD7QeAid3mRVAhMGV3yUL-oRPrR0P7s8WBUU-d5HIvlVeMMB8cQnEOQDtyYaArCwEALw_wcB"><img
+                    src="zilberman-9808.webp" height="300px" width="350px">
+                <h2> yoga special classes</h2>
+            </a>
+        </div>
+        <div class="subprogram1">
+            <a style="text-decoration: none; color: black;" href="corporateyoga.html"> <img
+                    src="article-2098021-11A14A8A000005DC-9_468x411.jpg" height="300px" width="350px">
+                <h2>Corporate yoga</h2>
+            </a>
+        </div>
+    </div>
+    <div class="dailyyoga">
+        <a href="basicyoga_pose.html"><button>Basic yoga poses</button></a>
+    </div>
+    <div class="main">
+
+        <div class="mainblog">
+            <div class="sabblog">
+                <img src="download.jpg" width="300px" height="200px">
+                <h1>Yoga linear model</h1>
+                <h3>made with wix</h3>
+                <p>Two general theories exist on the origins of yoga. The linear model holds that yoga originated in
+                    the
+                    Vedic period, as soon as posible textual corpus, and influenced Buddhism, according to author
+                    Edward
+                    Fitzpatrick Crangle, this model is mainly
+                    supported by Hindu scholars.</p>
+            </div>
+            <div class="sabblog">
+                <img src="yoga-poses-to-relieve-stress.webp" width="300px" height="200px">
+                <h1>Yoga in DeMun</h1>
+                <h3>Made with Weebly</h3>
+                <p>It’s time to roll out your yoga mat and discover the combination of physical and mental exercises
+                    that for thousands of years have hooked yoga practitioners around the globe. The beauty of yoga
+                    is
+                    that you don’t have to be a yogi or yogini to reap the benefits. Whether you are young</p>
+            </div>
+            <div class="sabblog">
+                <img src="images (1).jpg" width="300px" height="200px">
+                <h1>Dharma Yoga Wheel</h1>
+                <h3>Made with Weebly</h3>
+                <p>To do Standing Forward, Bend, exhale, and fold over your legs. If the hamstrings feel a little
+                    tight
+                    at first, bend the knees so that you can release your spine. Let the head hang heavy.
+
+                    Keep, but it is unnecessary. You can clasp opposite elbows with opposite hands while swaying
+                    gently
+                    from side to side.</p>
+            </div>
+            <div class="sabblog">
+                <img src="images.jpg" width="300px" height="200px">
+                <h1>Natural Living</h1>
+                <h3>Made with Wix</h3>
+                <p>Reverse Warrior shares a similar stance to Warrior I and incorporates a slight heart-opening side
+                    bend or optional backbend.
+
+                    To stay steady in the posture, it's essential to root into the sole of the front foot, anchor
+                    the
+                    outside edge of the back foot, and engage the glutes and hamstrings.
+
+                    Focus your gaze up toward the palm as it reaches overhead.</p>
+            </div>
+            <div class="sabblog">
+                <img src="Importance and Benefits of Yoga 1020x450.jpg" width="300px" height="200px">
+                <h1>Feel Good Yoga</h1>
+                <h3>Made with Squarespace</h3>
+                <p>Standing forward bends like Pyramid pose are an ideal time to break out your yoga blocks to make
+                    the
+                    pose more accessible. Place a block on either side of your front foot to "raise the floor" to a
+                    level your hands can comfortably reach. Your hamstrings will still enjoy a nice stretch, and
+                    they'll
+                    thank you for your consideration.</p>
+            </div>
+            <div class="sabblog">
+                <img src="maxresdefault.jpg" width="300px" height="200px">
+                <h1>Yoga Stretch</h1>
+                <h3>made with Squarespace</h3>
+                <p> The alignment of your lunge is super important. The thigh is parallel to the floor. At the same
+                    time, keep your hips level and energize your back leg.Many people don't go deep enough into the
+                    front leg and sag in the back leg. Glance in the mirror to make sure you're getting it right.
+                </p>
+            </div>
+            <div class="sabblog">
+                <div id="displayImage"></div>
+                <h1 id="cblogs"> </h1>
+                <h3 id="sub"></h3>
+                <p id="con"></p>
+            </div>
+        </div>
+    </div>
+    <footer class="footer_page">
+        <div class="footer">
+            <p>Reach Me Out:</p>
+            <a class="links" href="https://github.com/login">
+                <i class="fab fa-github"></i>
+            </a>
+            <a class="links" href="https://twitter.com/i/flow/login"><i class="fab fa-twitter"></i>
+            </a>
+            <a class="links" href="https://www.linkedin.com/login">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+    </footer>
+</body>
+<script>
+    // ........resposive navbar..................
+    const mobile_nav = document.querySelector(".mobile-view");
+    const nav_header = document.querySelector(".header")
+    const toggleNavbar = () => {
+        nav_header.classList.toggle("active");
+
+    }
+    mobile_nav.addEventListener("click", () => {
+        toggleNavbar();
+
+    })
+    // ......activepage on click...................
+    const activepage = window.location.pathname;
+
+    const alink = document.querySelectorAll(".btn").forEach(link => {
+        if (link.href.includes(`${activepage}`)) {
+            link.classList.add('active');
+        }
+
+    })
+
+    const storedData1 = localStorage.getItem("title");
+    const storedData2 = localStorage.getItem("subtitle");
+    const storedData3 = localStorage.getItem("contant");
+
+    document.getElementById("cblogs").textContent = storedData1;
+    document.getElementById("sub").textContent = storedData2;
+    document.getElementById("con").textContent = storedData3;
+
+// .......................image upload.................................
+    const storedImage = localStorage.getItem("storedImage");
+
+    const imgElement = document.createElement("img");
+    // imgElement.setAttribute("id","displayImg")
+    // const imgElement = document.getElementsByTagName(img);
+    imgElement.src = storedImage;
+
+    document.getElementById("displayImage").appendChild(imgElement);
+</script>
+</html>
